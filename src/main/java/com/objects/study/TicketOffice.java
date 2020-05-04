@@ -14,6 +14,10 @@ public class TicketOffice {
     this.tickets.addAll(Arrays.asList(tickets));
   }
 
+  public Ticket getTickets() {
+    return tickets.remove(0);
+  }
+
   public Long getAmount() {
     return amount;
   }

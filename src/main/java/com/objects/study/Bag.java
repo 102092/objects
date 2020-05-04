@@ -31,5 +31,7 @@ public class Bag {
     this.amount += amount;
   }
 
-
+  public void setTicket(Ticket ticket) {
+    this.ticket = ticket;
+  }
 }
