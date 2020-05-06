@@ -11,3 +11,4 @@
 
 ### 브랜치
 - [Ch1](https://github.com/102092/objects/tree/chapter1)
+- [Ch2](https://github.com/102092/objects/tree/chapter2)
