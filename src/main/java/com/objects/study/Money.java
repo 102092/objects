@@ -8,16 +8,16 @@ public class Money {
 
   private final BigDecimal amount;
 
-  private static Money wons(long amout) {
-    return new Money(BigDecimal.valueOf(amout));
-  }
-
-  private static Money wons(double amout) {
-    return new Money(BigDecimal.valueOf(amout));
-  }
-
   Money(BigDecimal amount) {
     this.amount = amount;
+  }
+
+  public static Money wons(long amout) {
+    return new Money(BigDecimal.valueOf(amout));
+  }
+
+  public static Money wons(double amout) {
+    return new Money(BigDecimal.valueOf(amout));
   }
 
   public Money plus(Money amount) {

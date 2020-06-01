@@ -33,4 +33,16 @@ public class Screening {
   public LocalDateTime getWhenScreened() {
     return whenScreened;
   }
+
+  public boolean isSequence(int sequence) {
+    return this.sequence == sequence;
+  }
+
+  public LocalDateTime getStartTime() {
+    return whenScreened;
+  }
+
+  public Money getMovieFee() {
+    return this.movie.getFee();
+  }
 }
