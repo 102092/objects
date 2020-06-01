@@ -1,14 +1,27 @@
 package com.objects.study;
 
+import java.time.Duration;
+
 public class Movie {
 
-  private Money price;
+  private String title;
+  private Duration runningTime;
+  private Money fee;
+  private DiscountPolicy discountPolicy;
 
-  public Money calculateMovieFee(Screening screening) {
-    return screening.getMovie().getPrice();
+  public Movie(String title, Duration runningTime, Money fee,
+      DiscountPolicy discountPolicy) {
+    this.title = title;
+    this.runningTime = runningTime;
+    this.fee = fee;
+    this.discountPolicy = discountPolicy;
   }
 
-  public Money getPrice() {
-    return price;
+  public Money calculateMovieFee(Screening screening) {
+    return fee.minus(discountPolicy.calculateDiscountAmount(screening));
+  }
+
+  public Money getFee() {
+    return fee;
   }
 }
