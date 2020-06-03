@@ -17,7 +17,10 @@ public class Movie {
     this.discountPolicy = discountPolicy;
   }
 
-  // 좋지 않음. 왜? 할일 정책을 일관적으로 `DisCountPolicy` 에서 결정했는데, 아래 메서드에서 할인 정책이 없을 경우 0원으로 결정해주고 있기 때문에
+  public void changeDisCountPolicy(DiscountPolicy discountPolicy) {
+    this.discountPolicy = discountPolicy;
+  }
+
   public Money calculateMovieFee(Screening screening) {
     return fee.minus(discountPolicy.calculateDiscountAmount(screening));
   }
